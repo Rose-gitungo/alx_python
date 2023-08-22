@@ -1,3 +1,3 @@
 def best_score(a_dictonary):
-    best_key=(max(k for k, v in a_dictonary.items()))
+    best_key=(max(a_dictonary.values()))
     return best_key
