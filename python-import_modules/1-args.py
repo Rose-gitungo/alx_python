@@ -1,15 +1,9 @@
-if len(argv)==1:
-    x='argument.'
-else:
-    x='arguments:'
-print(len(argv)+'x'+"\n")
+def numb(args):
+     return(len(args))
 
-def numb():
-    for i in range(len(argv)):
-        n=0
-        print('%n+1:'+ i +"\n")
+x='Hello Holberton School 98 Battery street'
 
-
+print(numb(x.split()),':','\n')
 
 
 if __name__ =="__main__":
