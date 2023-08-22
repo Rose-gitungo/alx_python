@@ -1,5 +1,5 @@
-def numb(args):
-     return(len(args))
+def numb(argv):
+     return(len(argv))
 
 x='Hello Holberton School 98 Battery street'
 
