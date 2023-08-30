@@ -1,5 +1,9 @@
+"""a module"""
 class Square:
+    """a class square"""
     def __init__(self,size=0):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'""" 
+        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -8,19 +12,27 @@ class Square:
     
     @property
     def size(self):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'""" 
+        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
         return self.__size
     
     @size.setter
     def size(self,value):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'""" 
+        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
 
     def area(self):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'""" 
+        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
         return self.__size**2
     
     def my_print(self):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'""" 
+        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
         if self.__size ==0:
             print()
         else:
