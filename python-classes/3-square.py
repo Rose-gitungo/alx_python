@@ -12,6 +12,24 @@ class Square():
         self.__size=size
 
     def area(self):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'""" 
+        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
         return self.__size **2
+    
+    @property
+    def size(self):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'""" 
+        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
+        return self.__size
+    
+    @size.setter
+    def size(self,value):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'""" 
+        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
+        if value != int:
+            raise TypeError("size must be an integer")
+        elif value< 0:
+            raise ValueError("size must be >= 0")
+
 
         
