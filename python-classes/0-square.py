@@ -2,7 +2,10 @@
 class Square():
     """"python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     size=""
-    def __init__(self,size) -> None:   
-        self.size=size
-        
+    def __init__(self,size):   
+        self.__size=size
 
+
+my_square = Square(3)
+print(type(my_square))
+print(my_square.__dict__)
