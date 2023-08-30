@@ -1,0 +1,6 @@
+def is_kind_of_class(obj,a_class):
+    if isinstance(a_class,int) == True or issubclass(a_class,int):
+       __name__ = type(obj)
+       return True and __name__
+    else:
+        return False
