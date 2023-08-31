@@ -9,11 +9,10 @@ def is_kind_of_class(obj,a_class):
 
     Args:
         obj: instance of a class
-        a_class: an inherited class or a  specoified class
+        a_class: an inherited class or a  specified class
 
-    Returns:
-        True:if object is an instance of or if object is instance of an inherited class 
-        False: otherwise returns False
+    Return:
+         bool: True if obj is an instance of a_class,False otherwise.
     """
     if isinstance(obj,a_class) == True or issubclass(a_class,int):
        __name__ = type(obj)

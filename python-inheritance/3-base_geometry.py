@@ -1,3 +1,8 @@
+"""
+A module containing an empty class.
+"""
 class BaseGeometry():
-    """ BaseGeometry class"""
+    """ 
+    An emptry BaseGeometry class.
+    """
     pass

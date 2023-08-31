@@ -1,10 +1,22 @@
+"""
+a module containg a class BaseGeomtery
+"""
 class BaseGeometry():
-    """base geometry"""
+    """
+    A class BaseGeometry
+    """
     
     def __init__(self) -> None:
-        """initialization structure"""
+        """
+        An initialization function.
+        """
         pass
 
     def area(self):
-        """an area function"""
+        """
+        Calculates the area.
+
+        Raises:
+            Exception: always raisies an exception,"area() is not implemented"
+        """
         raise Exception ("area() is not implemented")

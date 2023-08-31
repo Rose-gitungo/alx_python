@@ -1,43 +1,42 @@
-"""python3 -c 'print(__import__("my_module").__doc__)'"""
-class BaseGeometry():
-    """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
-    def __init__(self,) -> None:
-        pass
+"""
+A module that inherits BaseGeomtry from 5-base_geometry.
+"""
+BaseGeometry =__import__('5-base_geometry').BaseGeometry
 
-    @property
-    def area(self):
-        """a getter"""
-        return self.__area
-    
-    @area.setter
-    def area(self,area):
-        """a setter"""
-        self.__area = area 
-    
-    def integer_validator(self,name,value):
-        """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'"""
-        name
-        if not isinstance(value,int):
-            raise TypeError (name + " must be an integer")
-        
-        if value <= 0:
-            raise ValueError (name +" must be greater than 0")
-        
 class Rectangle(BaseGeometry):
-    """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
+    """
+    A class Rectangle that inherits BaseGeomtry.
+    """
 
     def __init__(self,width,height):
-        """initialization of rectangle"""
+        """
+        an initializaion class
+
+        Args:
+            width: width of rectangle
+            height:heigth of rectangle
+        """
+
+        self.integer_validator("width",width)
+        self.integer_validator("height",height)
+
         self.__width=width
         self.__height=height
-        area= width * height
 
-        super().integer_validator(width,height)
-        x='[Rectangle] ' + str(width) +'/'+str(height)+'\n'
-        y= str(area)
-        print(x + y)
+    def __str__(self) -> str:
+        """
+        Returning a string representation of the rectangle.
+        """
+        return "[Rectangle] {}/{}".format(self.__width,self.__height)
 
+    def area(self):
+        """
+        function to calculate area.
+
+        Returns:
+             self.__height * self.__width
+        """
+        return self.__height * self.__width
        
 
 
