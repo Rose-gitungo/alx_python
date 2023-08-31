@@ -35,11 +35,15 @@ class Rectangle(Base):
          
         raise: typeError with the message <name of attribute> must be an integer if input is not integer.
         """
-        if not isinstance(width,int):
+        if isinstance(width,int)==False:
             raise TypeError ("width must be an integer")
+        else:
+            print('OK')
         
         if width <= 0 :
             raise ValueError(' weight must be > 0')
+        else:
+            print('OK')
         
         self.__width = width
 
@@ -57,11 +61,15 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        if not isinstance(height,int):
+        if isinstance(height,int)==False:
             raise TypeError (" height must be an integer")
+        else:
+            print('OK')
         
         if height <= 0 :
             raise ValueError(' height must be > 0')
+        else:
+            print('OK')
         
         self.__height = height
 
@@ -79,11 +87,15 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        if not isinstance(x,int):
+        if isinstance(x,int)==False:
             raise TypeError (("x must be an integer"))
+        else:
+            print('OK')
         
         if x < 0 :
             raise ValueError( 'x must be >= 0')
+        else:
+            print('OK')
         
         self.__x = x
 
@@ -101,11 +113,15 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        if not isinstance(y,int):
+        if  isinstance(y,int)==False:
             raise TypeError ("y must be an integer")
+        else:
+            print('OK')
         
         if y < 0 :
             raise ValueError ("y must be >= 0")
+        else:
+            print('OK')
         
         self.__y = y    
     
