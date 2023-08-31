@@ -168,5 +168,5 @@ class Rectangle(Base):
                     setattr(self,key,value)
 
             
-   
+
 
