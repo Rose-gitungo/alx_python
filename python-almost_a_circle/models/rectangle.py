@@ -153,6 +153,20 @@ class Rectangle(Base):
             for i, value in enumerate(args):
                 setattr(self,attributes[i],value)
 
+    def update(self,*args,**kwargs):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        if args:
+            attributes = ['id','width','height','x','y']
+
+            for i, value in enumerate(args):
+                setattr(self,attributes[i],value)
+            else:
+                for key,value in kwargs.items():
+                    setattr(self,key,value)
+
             
    
 
