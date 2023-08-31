@@ -142,6 +142,17 @@ class Rectangle(Base):
         for _ in range(self.__height):
             print('#'*self.__width+'$'*self.__x)
 
+    def update(self,*args):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        if args:
+            attributes = ['id','width','height','x','y']
+
+            for i, value in enumerate(args):
+                setattr(self,attributes[i],value)
+
             
    
 
