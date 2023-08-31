@@ -131,6 +131,17 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x,self.y,self.width,self.height)
 
-    
+    def display(self):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        for _ in range(self.__y):
+            print()
+
+        for _ in range(self.__height):
+            print('#'*self.__width+'$'*self.__x)
+
+            
    
 
