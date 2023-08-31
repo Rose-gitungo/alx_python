@@ -19,6 +19,65 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         
+   
+    def area(self):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        return self.__width * self.__height
+    
+    def display(self):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        for _ in range(self.__height):
+            print('#'*self.__width)
+        
+    def __str__(self):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x,self.y,self.width,self.height)
+
+    def display(self):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        for _ in range(self.__y):
+            print()
+
+        for _ in range(self.__height):
+            print('#'*self.__width+'$'*self.__x)
+
+    def update(self,*args):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        if args:
+            attributes = ['id','width','height','x','y']
+
+            for i, value in enumerate(args):
+                setattr(self,attributes[i],value)
+
+    def update(self,*args,**kwargs):
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        if args:
+            attributes = ['id','width','height','x','y']
+
+            for i, value in enumerate(args):
+                setattr(self,attributes[i],value)
+            else:
+                for key,value in kwargs.items():
+                    setattr(self,key,value)
+
     @property
     def width(self):
         """
@@ -108,64 +167,6 @@ class Rectangle(Base):
             raise ValueError ("y must be >= 0")
         
         self.__y = y    
-
-    def area(self):
-        """
-        python3 -c 'print(__import__("my_module").my_function.__doc__)'
-        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-        """
-        return self.__width * self.__height
-    
-    def display(self):
-        """
-        python3 -c 'print(__import__("my_module").my_function.__doc__)'
-        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-        """
-        for _ in range(self.__height):
-            print('#'*self.__width)
-        
-    def __str__(self):
-        """
-        python3 -c 'print(__import__("my_module").my_function.__doc__)'
-        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-        """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x,self.y,self.width,self.height)
-
-    def display(self):
-        """
-        python3 -c 'print(__import__("my_module").my_function.__doc__)'
-        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-        """
-        for _ in range(self.__y):
-            print()
-
-        for _ in range(self.__height):
-            print('#'*self.__width+'$'*self.__x)
-
-    def update(self,*args):
-        """
-        python3 -c 'print(__import__("my_module").my_function.__doc__)'
-        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-        """
-        if args:
-            attributes = ['id','width','height','x','y']
-
-            for i, value in enumerate(args):
-                setattr(self,attributes[i],value)
-
-    def update(self,*args,**kwargs):
-        """
-        python3 -c 'print(__import__("my_module").my_function.__doc__)'
-        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-        """
-        if args:
-            attributes = ['id','width','height','x','y']
-
-            for i, value in enumerate(args):
-                setattr(self,attributes[i],value)
-            else:
-                for key,value in kwargs.items():
-                    setattr(self,key,value)
 
             
 
