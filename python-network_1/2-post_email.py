@@ -1,11 +1,14 @@
-"""python3 -c 'print(__import__("my_module").__doc__)'"""
+"""
+Taking a url and an email address and sending a post request to the url.
+"""
 import requests
 import sys
 
-url =sys.stdin[0]
-email = sys.stdin[1]
+
 
 if __name__ =="__main__":
-    params=email
-    r=requests.post('url',params)
+    url = sys.argv[1]
+    email = sys.argv[2]
+    payload ={'email':email}
+    r=requests.post('url',params=payload)
     print(r)
